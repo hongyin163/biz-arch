@@ -1,0 +1,68 @@
+@primary-color:#1AB58F;
+@red-color: #FF5959;
+
+.upload-excel{
+    &_body{
+        color: #AAA;
+        background: #FFF;
+    }
+    &_title{
+        margin:20px 0 10px 0;
+        padding-left: 5px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 14px;
+        border-left: 2px solid @primary-color;
+        color: #333;
+    }
+    &_desc{
+        font-size: 12px;
+        ol{
+            margin-left: 12px;           
+            list-style: decimal;
+        }
+        li{
+            line-height: 24px;
+        }
+        .bold{
+            color:#666;
+        }
+    }
+    &_file{
+        display: inline-block;
+        padding: 5px;
+        background: #fafafa;
+        border:1px dashed #ddd;
+        .bizicon{
+            margin-right: 10px;
+            margin-left: 5px;
+            font-size: 30px;
+            vertical-align: middle;    
+        }
+        .biz-button{
+            vertical-align: middle;      
+        }
+        .disabled{
+            color: #bfbfbf;
+        }
+        .biz-input{
+            width: 300px;
+            margin: 0;
+            margin-right: 10px;    
+            vertical-align: middle;       
+        }
+        .biz-upload{
+            display: inline-block;
+        }
+    }
+    &_result{
+        height: 100px;
+        padding: 10px;
+        overflow: auto;
+        font-size: 12px;
+        border: 1px solid #F8F8F8;
+    }
+    .red{
+        color: @red-color;
+    }
+}

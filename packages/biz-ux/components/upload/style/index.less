@@ -1,0 +1,49 @@
+@import '../../icon/style/index.less';
+@import '../../loading/style/index.less';
+
+.biz-upload{
+    &_files{
+        text-align: left;
+    }
+    &_file{
+        height: 50px;
+        margin: 10px 0;
+        padding: 0 20px;
+        font-size: 12px;
+        line-height: 48px;
+        background: #fafafa;
+        border:1px dashed #ddd;
+        .file{
+            display: inline-block;
+            margin-right: 10px;
+            font-size:20px; 
+            vertical-align: middle;
+        }
+        .name{
+            display: inline-block;
+            width: 200px;
+            margin-right: 50px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            vertical-align: middle;
+        }
+        .uploading,
+        .success,
+        .error{
+            display: inline-block;
+            margin: 0 10px;
+            vertical-align: middle;
+            .bizicon{
+                margin: 0 5px;
+            }
+        }
+        .success,
+        .uploading{
+            color: #1AB58F;
+        }
+        .error{
+            color: #FF5959;
+        }
+    }
+}

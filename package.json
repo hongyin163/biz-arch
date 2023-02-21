@@ -1,0 +1,15 @@
+{
+  "name": "biz-arch",
+  "private": true,
+  "scripts": {
+    "build": "lerna run build",
+    "pull:biz-ux": "git subtree pull --prefix=packages/biz-ux biz-ux master",
+    "push:biz-ux": "git subtree split --prefix=packages/biz-ux -b biz-ux && git push biz-ux biz-ux:master"
+  },
+  "devDependencies": {
+    "lerna": "^3.13.4"
+  },
+  "dependencies": {
+    "react-redux": "^7.2.0"
+  }
+}

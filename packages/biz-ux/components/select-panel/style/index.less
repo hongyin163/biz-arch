@@ -1,0 +1,104 @@
+@import '../../style/themes/default';
+@import '../../style/mixins/index';
+@import '../../input/style/mixin.less';
+@import '../../input/style/index.less';
+@import '../../icon/style/index.less';
+
+@select-panel-input-height: 30px;
+@input-padding-right:25px;
+.biz-select-panel {
+    &_input {
+        position: relative;
+        font-size: 0;
+        white-space: nowrap; // i,
+        // input {
+        //     display: inline-block;
+        //     vertical-align: middle;
+        //     padding-right: 20px;
+        //     font-size: 12px;
+        //     border: 0;
+        //     &:active,
+        //     &:focus {
+        //         border: 0;
+        //         box-shadow: none;
+        //     }
+        // }
+        // i{
+        //     width: 18px;
+        //     height: 18px;
+        // }
+    }
+    &_arrow,
+    &_render {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 12px;
+        cursor: pointer;
+        // // border: 0;
+        // &:active,
+        // &:focus {
+        //     border: 0;
+        //     box-shadow: none;
+        // }
+    }
+    &_arrow-warpper{
+        position: absolute;
+        top: 2px;
+        right: 1px;
+        bottom: 2px;
+        width: @input-padding-right;
+        background: #fff;
+
+    }
+    // &_arrow{
+    //     position: absolute;
+    //     right: 5px;
+    //     top:6px;
+    //     width: 18px;
+    //     height: 18px;
+    //     color: #ccc;
+    //     display: block;
+    //     vertical-align: middle;
+    //     font-size: 12px;
+    //     cursor: pointer;
+    // }
+    &_arrow {
+        position: absolute;
+        top:6px;  
+        right: 5px;
+        width: 18px;
+        height: 18px;
+        color: #ccc;
+        line-height: 18px;
+        text-align: center;
+    }
+    &_render {
+        width: 100%;        
+        padding-right: 20px;
+        padding-left: 10px;
+        min-height: @select-panel-input-height;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        .placeholder{
+            color: @input-placeholder-color;
+        }
+    }
+    &_content {
+        position: absolute;
+        z-index: 1010;
+        background: #fff;
+        border: 1px solid #EEE;
+        box-shadow: 0 2px 4px 0 rgba(45,45,45,0.10);
+        transition: top .3s ease-in-out;        
+    }
+    &.disabled{
+        .biz-input,
+        .biz-input-tag_arrow-warpper,
+        .biz-select-panel_arrow-warpper,
+        .bizicon
+        {
+            .disabled();
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@import '../../style/themes/default';
+@import '../../style/mixins/index';
+
+.biz-switch{
+    position: relative;
+    display: inline-block;
+    min-width: 44px;
+    height: @switch-height;
+    margin:0;
+    padding: 0;
+    border:0;
+    line-height: @switch-height;
+    border-radius: @switch-height;
+    vertical-align: middle;
+    color: rgba(0,0,0,.65);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .36s;
+    user-select: none;
+    background-color: @switch-normal-bg;
+    &-checked{
+        background-color:  @primary-color;
+        .biz-switch-handle{
+            left:calc(100% - 18px - 2px);
+        }
+        .biz-switch-inner{
+            margin: 0 25px 0 7px;
+        }
+    }
+    &-handle{
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: calc(@switch-height - 4px);
+        height: calc(@switch-height - 4px);
+        background: white;
+        border-radius: calc(@switch-height - 4px);
+        transition: all .36s cubic-bezier(.78,.14,.15,.86);
+    }
+    &-inner{
+        color: white;
+        font-size: 12px;
+        margin: 0 7px 0 25px;
+        transition: margin .36s;
+    }
+}

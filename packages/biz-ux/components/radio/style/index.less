@@ -1,0 +1,54 @@
+@import '../../style/themes/default';
+@import '../../style/mixins/index';
+@import '../../icon/style/index.less';
+@import '../../button/style/index.less';
+@import './radio-button.less';
+@import './radio-group.less';
+
+// Radio
+// @radio-size : 16px;
+// @radio-dot-color : @primary-color;
+
+// // Radio buttons
+// @radio-button-bg : @btn-default-bg;
+// @radio-button-color : @btn-default-color;
+// @radio-button-hover-color : @primary-5;
+// @radio-button-active-color : @primary-7;
+
+// @checkbox-size : 16px;
+// @checkbox-color : @primary-color;
+// @checkbox-check-color : #fff;
+// @radio-border-width : @border-width-base;
+// @radio-disable-color : #BBB;
+
+
+
+.biz-radio {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+
+    .bizicon{
+        font-weight: normal;
+        font-size: @radio-size;
+        margin: 0 3px;
+    }
+    .bizicon-checked2{
+        color:@radio-dot-color;    
+    }
+    .bizicon-uncheck2{
+        color:@checkbox-uncheck-color;    
+    }
+
+    &:hover{
+        .bizicon{
+            color: @radio-button-hover-color;
+            cursor: pointer;
+        }
+    }
+    &.disabled{
+        .bizicon{
+            color: @checkbox-disable-color;
+        }
+    }
+}

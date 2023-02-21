@@ -1,0 +1,21 @@
+
+.biz-button-size(@height; @padding; @font-size; @border-radius) {
+    height: @height;
+    padding: @padding;
+    font-size: @font-size;
+    line-height: @height - 2;
+    border-radius: @border-radius;
+}
+.biz-button-class(@color;@background-color;@border-color){
+    color:@color;
+    background-color: @background-color;
+    border-color:@border-color;
+}
+
+.biz-button-type(@type;@status;@color;@background-color;@border-color){
+    .biz-button-@{type}{
+        &:@{status}{
+            .biz-button-class(@color,@background-color,@border-color);
+        }
+    }
+}

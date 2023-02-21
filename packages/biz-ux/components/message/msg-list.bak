@@ -1,0 +1,77 @@
+import React, { Component } from 'react';
+
+import Animate from 'rc-animate';
+import IconMap from './icon-map';
+import MsgItem from './msg-item';
+
+interface IMsgItem {
+    key, type, content, duration, onClose
+}
+export default class MsgList extends Component<any, { list: IMsgItem[] }> {
+    public seed: number;
+    constructor(props, context) {
+        super(props, context);
+        const me = this;
+        me.state = {
+            list: [],
+        }
+        me.seed = 0;
+    }
+    public uuid = () => {
+        return `biz-message_msg-${--this.seed}`;
+    }
+    public add = (item: IMsgItem) => {
+        const me = this;
+        me.setState((pre) => {
+            const { list } = pre;
+            item.key = item.key || me.uuid();
+            return {
+                list: list.concat(item),
+            }
+        })
+    }
+    public remove = (key) => {
+        const me = this;
+        me.setState((pre) => {
+            const { list } = pre;
+            return {
+                list: list.filter(p => p.key !== key),
+            }
+        })
+    }
+    public getTransitionName() {
+        return 'fade';
+    }
+    public render() {
+        const me = this;
+        const {
+            list,
+        } = me.state;
+        return (
+            <div className="biz-message_list">
+                <Animate transitionName={this.getTransitionName()}>
+                    {
+                        list.map((item) => {
+                            const icon = IconMap[item.type];
+                            return (
+                                <MsgItem
+                                    key={item.key}
+                                    onClose={() => {
+                                        me.remove(item.key);
+                                        if (item.onClose) {
+                                            item.onClose();
+                                        }
+                                    }}
+                                    type={item.type}
+                                    duration={item.duration}
+                                    content={item.content}
+                                    icon={icon}
+                                />
+                            )
+                        })
+                    }
+                </Animate>
+            </div>
+        )
+    }
+}

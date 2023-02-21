@@ -1,0 +1,47 @@
+import classNames from 'classnames';
+import React, { Component } from 'react';
+import Icon from '../_common/icon';
+import { IMessageItemProps } from './types';
+
+export default class MsgItem extends Component<IMessageItemProps, any> {
+    public componentDidMount() {
+        this.setCloseTimeout();
+    }
+    public setCloseTimeout() {
+        const me = this;
+        const {
+            duration = 3,
+            onClose,
+        } = me.props;
+        if (duration === 0) {
+            return;
+        }
+        const timer = setTimeout(() => {
+            if (onClose) {
+                onClose();
+            }
+            clearTimeout(timer);
+        }, duration * 1000)
+    }
+    public render() {
+        const me = this;
+        const {
+            content,
+            type,
+            icon,
+        } = me.props;
+        const cls = classNames('biz-message_content', type);
+        return (
+            <div className="biz-message_item">
+                <div className={cls}>
+                    {icon ? icon : (
+                        <Icon type={type} />
+                    )}
+                    <span>
+                        {content}
+                    </span>
+                </div>
+            </div>
+        )
+    }
+}

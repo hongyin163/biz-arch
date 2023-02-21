@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "rootDir": "./",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "strictFunctionTypes": true,
+        "target": "esnext",
+        "jsx": "react",
+        "allowJs": true,
+        "module": "es6",
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "resolveJsonModule":true,
+        "paths": {
+            "biz-ux": [
+                "./"
+            ]
+        },
+        "lib": [
+            "es2015",
+            "es2016",
+            "dom",
+            "es5"
+        ]
+    },
+    "include": [
+        "./components/**/*"
+    ],
+    "exclude": [
+        "./components/style/fonts/iconfont.js",
+        "./components/*/demo/**/*",
+        "./components/*/style/**/*"
+    ]
+}

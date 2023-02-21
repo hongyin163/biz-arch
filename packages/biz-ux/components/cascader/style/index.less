@@ -1,0 +1,41 @@
+@import '../../button/style/index.less';
+@import '../../select-panel/style/index.less';
+@import '../../loading/style/index.less';
+@import '../../list-cascader/style/index.less';
+
+@footer-height:30px;
+.biz-cascader{
+    .biz-input{
+        vertical-align: middle;
+    }
+    &_footer{
+        height: @footer-height;
+        color: #AAA;
+        background: #F8F8F8;
+        .left{
+            float: left;
+            height:@footer-height ;
+            padding: 0 10px;
+            line-height: @footer-height;
+            a{
+                color: #AAA;
+            }
+        }
+        .right{
+            height:@footer-height ;
+            overflow: hidden;
+            text-align: right;
+            &::before {
+                display: inline-block;
+                width: 0;
+                height: 100%;
+                vertical-align: middle;
+                content: '';
+            }
+        }
+        .biz-button{
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}

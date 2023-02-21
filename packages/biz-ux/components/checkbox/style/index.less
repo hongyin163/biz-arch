@@ -1,0 +1,44 @@
+@import '../../style/themes/default';
+@import '../../style/mixins/index';
+
+// @import './mixin';
+// @checkbox-size : 16px;
+// @checkbox-color : @primary-color;
+// @checkbox-check-color : #fff;
+// @checkbox-border-width : @border-width-base;
+// @checkbox-disable-color : #BBB;
+
+.biz-checkbox {
+    display: inline-block;
+    user-select: none;
+    font-size: @checkbox-size;
+    .bizicon{
+        font-weight: normal;
+        font-size: @checkbox-size;
+        margin-right: 5px;
+    }
+    .bizicon-checked1{
+        color:@checkbox-check-color;    
+    }
+    .bizicon-unchecked1{
+        color:@checkbox-uncheck-color;    
+    }
+    &:hover{
+        .bizicon{
+            color: @checkbox-check-color;
+            cursor: pointer;
+        }
+    }
+    &.disabled{
+        .bizicon{
+            color: @checkbox-disable-color;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.biz-checkbox-group{
+    .biz-checkbox{
+        margin: 0 5px;
+    }
+}

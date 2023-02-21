@@ -1,0 +1,41 @@
+{
+  "name": "biz-store",
+  "version": "1.0.3",
+  "description": "> Simplify the use of Redux ",
+  "author": "lihongyin <lihongyin@58.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "directories": {
+    "lib": "lib",
+    "es": "es",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "es"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://igit.58corp.com/chinahr-fe/biz-store.git"
+  },
+  "scripts": {
+    "dev": "tsc --outDir ./es --module es2015 --watch",
+    "build": "tsc --outDir ./lib --module commonjs && tsc --outDir ./es --module es2015",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@types/node": "^12.7.5",
+    "@types/redux": "^3.6.0",
+    "react-redux": "^7.2.2",
+    "redux-logger": "^3.0.6"
+  },
+  "peerDependencies": {
+    "immutable": "^3.8.0 ||^4.0.0-rc.12",
+    "react": "^16.8.3",
+    "redux": "^4.0.0 || ^4.0.0-0",
+    "react-redux": "^7.0.0"
+  },
+  "gitHead": "8f3657bfcb884f0b45dae980823af8860a4485da"
+}

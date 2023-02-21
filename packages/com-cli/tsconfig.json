@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "plugins": [],
+        "outDir": "./lib/",
+        "sourceMap": false,
+        "noImplicitAny": false,
+        "strictFunctionTypes": true,
+        "target": "es6",
+        "jsx": "react",
+        "allowJs": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {},
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,        
+        "esModuleInterop": true,
+        "lib": [
+            "es2016",
+            "dom",
+            "es5"
+        ]
+    },
+    "include": [
+        "./src/**/*",
+    ],
+    "exclude": []
+}

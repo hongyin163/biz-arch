@@ -1,0 +1,82 @@
+@import '../../style/themes/default';
+@import '../../style/mixins/index';
+@input-affix-width: 19px;
+// size mixins for input
+.input-lg() {
+    padding: @input-padding-vertical-lg @input-padding-horizontal-lg;
+    height: @input-height-lg;
+    font-size: @font-size-lg;
+}
+
+.input-sm() {
+    padding: @input-padding-vertical-sm @input-padding-horizontal-sm;
+    height: @input-height-sm;
+}
+
+// input status
+// == when focus or actived
+.active(@color: @outline-color) {
+    border-color:~`colorPalette('@{color}', 5) `;
+    outline: 0;
+    box-shadow: @input-outline-offset @outline-blur-size @outline-width fade(@color, 20%);
+    border-right-width: @border-width-base  !important;
+}
+
+// == when hoverd
+.hover(@color: @input-hover-border-color) {
+    border-color:~`colorPalette('@{color}', 5) `;
+    border-right-width: @border-width-base  !important;
+}
+
+.disabled() {
+    background-color: @input-disabled-bg;
+    opacity: 1;
+    cursor: not-allowed;
+    color: @disabled-color;
+    &:hover {
+        .hover(@input-border-color);
+    }
+}
+
+// Basic style for input
+.input() {
+    position: relative;
+    display: inline-block;
+    padding: @input-padding-vertical-base @input-padding-horizontal-base;
+    width: 100%;
+    height: @input-height-base;
+    font-size: @font-size-base;
+    line-height:  @input-height-base - @input-padding-vertical-base * 2 - @border-width-base * 2;
+    color: @input-color;
+    background-color: @input-bg;
+    background-image: none;
+    border: @border-width-base @border-style-base @input-border-color;
+    border-radius: @border-radius-base;
+    .placeholder(); // Reset placeholder
+    transition: all 0.3s;
+    &:hover {
+        .hover();
+    }
+    &:focus {
+        .active();
+    }
+    .disabled{
+        .disabled();
+    }
+    &:disabled {
+        .disabled();
+    } // Reset height for `textarea`s
+    textarea& {
+        max-width: 100%; // prevent textearea resize from coming out of its container
+        height: auto;
+        vertical-align: bottom;
+        transition: all 0.3s, height 0s;
+        min-height: @input-height-base;
+    } // Size
+    &-lg {
+        .input-lg();
+    }
+    &-sm {
+        .input-sm();
+    }
+}

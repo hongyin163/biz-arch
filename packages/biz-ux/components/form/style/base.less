@@ -1,0 +1,21 @@
+.biz-form{
+    position: relative;
+    display: block;
+    &_item{
+    }
+    &_label{
+        .required::before{
+           content: "*";
+           color:red;
+           margin: 0 3px;
+        }
+    }
+    &_item-required{
+
+    }
+    &_content{
+    }
+    .error{
+        color:red;
+    }
+}

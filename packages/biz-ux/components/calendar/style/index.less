@@ -1,0 +1,97 @@
+@import '../../style/themes/default';
+@import '../../style/mixins/index';
+@import './mixin.less';
+
+
+.calendar{
+    background: #f8f8f8;
+    padding: 5px;
+    .empty{
+        background: #fff;
+        color: #ccc;
+    }
+    &-title{
+        height: 45px;
+        line-height: 45px;
+        border-bottom: 1px solid #ededed;
+        font-size: 12px;
+        &_year{
+            color: #333;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        &_month{
+            color: #333;
+            font-weight: bold;
+            margin: 0;
+        }
+        &_icon{
+            font-size: 20px;
+            color: #ccc;
+            vertical-align: sub;
+            cursor: pointer;
+        }
+        &_left{
+            display: inline-block;
+            transform:rotate(180deg);
+            -ms-transform:rotate(180deg); 	
+            -moz-transform:rotate(180deg); 	
+            -webkit-transform:rotate(180deg); 
+            -o-transform:rotate(180deg); 
+        }
+    }
+    &-body{
+        background: white;
+        &_week{
+            width: 100%;
+            ul{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                li{
+                    width: calc( 100% / 7 );
+                    height: 36px;
+                    text-align: center;
+                    line-height: 36px;
+                    display: inline-block;
+                    border-bottom: 1px solid  #ededed;
+                    border-right: 1px solid  #ededed;
+                    font-size: 12px;
+                    color: #666;
+                    font-weight: bold;
+                    vertical-align: top;
+                    
+                }
+                li:nth-child(7){
+                    border-right: none;
+                }
+            }
+        }
+        &_list{
+            width: 100%;
+            ul{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                li{
+                    width: calc( 100% / 7 );
+                    height: 114px;
+                    padding: 10px;
+                    display: inline-block;
+                    border-bottom: 1px solid  #ededed;
+                    border-right: 1px solid  #ededed;
+                    font-size: 12px;
+                    color: #797979;
+                    vertical-align: top;
+                    // cursor: pointer;
+                    position: relative;
+                }
+                
+                .active{
+                    border: 1px solid #1ab58f;
+                }
+            }
+        }
+    }
+} 
+

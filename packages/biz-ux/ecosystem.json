@@ -1,0 +1,48 @@
+{
+    "apps": [
+        {
+            "name": "biz-ux",
+            "script": "./server/app.js",
+            "cwd": "./",
+            "error_file": "../logs/server.err.log",
+            "out_file": "../logs/server.out.log",
+            "exec_mode": "cluster",
+            "instances": 1,
+            "max_memory_restart": "1024M",
+            "watch": false,
+            "ignore_watch": [
+                "[\\/\\\\]\\./",
+                "node_modules"
+            ],
+            "merge_logs": false,
+            "exec_interpreter": "node",
+            "autorestart": false,
+            "vizion": false,
+            "max_restarts": 2,
+            "min_uptime": "15s",
+            "next_gen_js": false,
+            "restart_delay": 4000,
+            "env": {
+                "COMMON_VARIABLE": "true",
+                "NODE_ENV": "production",
+                "PORT": 8001
+            },
+            "env_production": {
+                "NODE_ENV": "production",
+                "PORT": 8001
+            },
+            "env_development": {
+                "NODE_ENV": "development",
+                "PORT": 8001
+            },
+            "env_test": {
+                "NODE_ENV": "test",
+                "PORT": 8001
+            },
+            "env_sandbox": {
+                "NODE_ENV": "sandbox",
+                "PORT": 8001
+            }
+        }
+    ]
+}

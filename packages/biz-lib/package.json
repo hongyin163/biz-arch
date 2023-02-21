@@ -1,0 +1,17 @@
+{
+  "name": "biz-lib",
+  "version": "0.1.42",
+  "description": "",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --outDir ./lib --module commonjs  --target es5 && tsc --outDir ./es --module es2015"
+  },
+  "author": "",
+  "license": "ISC",
+  "gitHead": "8f3657bfcb884f0b45dae980823af8860a4485da",
+  "dependencies": {
+    "@babel/runtime": "^7.6.2"
+  }
+}

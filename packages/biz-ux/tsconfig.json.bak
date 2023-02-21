@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "strictFunctionTypes": true,
+        "target": "es6",
+        "jsx": "react",
+        "allowJs": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "declaration": false,
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "strictNullChecks": true,
+        "esModuleInterop":true,
+        "allowSyntheticDefaultImports": true,
+        "lib": [
+            "es2016",
+            "dom",
+            "es5"
+        ],
+        "paths": {
+            "biz-lib": [
+                "packages/biz-lib"
+            ]
+        }
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "lib",
+        "es"
+    ]
+}

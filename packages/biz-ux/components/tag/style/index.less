@@ -1,0 +1,79 @@
+@import '../../style/themes/default';
+@import '../../icon/style/index.less';
+
+@tag-height: 26px;
+@tag-padding: 0 10px;
+@tag-bg:#fff;
+@tag-hover-bg: #F8F8F8;
+@icon-close-size:22px;
+@query-item-hegiht:26px;
+
+.biz-tag{
+    position: relative;
+    display: inline-block;
+    height: @tag-height;
+    max-width: 125px;
+    margin:0 10px 5px 0; 
+    padding: 0 10px;
+    line-height: @query-item-hegiht - 2;
+    // vertical-align: middle;
+    background: #FFF;
+    border: 1px solid #DBDBDB;
+    border-radius: 2px;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &_closable{
+        padding-right: @icon-close-size + 10px;
+        .close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: @tag-height - 2;
+            height: @tag-height - 2;
+            text-align: center;
+            line-height: @icon-close-size;
+            i{
+                color: #ccc;
+                font-size: 16px;
+            }
+        }
+        .close:hover{
+            background-color: @primary-color;       
+            i{
+                color: white;
+                font-size: 16px;
+            }
+        } 
+    }
+
+    &:hover,
+    &_checked{
+        border-radius: 2px;
+        border-color: @primary-color;
+        color: @primary-color;
+        background: #E8F7F3;
+        cursor: pointer;
+    }
+}
+.biz-check{
+    padding: 6px 10px;
+    background: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    border-radius: 2px;
+    margin: 0 10px 10px 0px;
+    cursor: pointer;
+    user-select: none;
+    &_checked{
+        background: #E8F7F3;
+        border-radius: 2px;
+        border-color: @primary-color;
+        color: @primary-color;
+    }
+    &:hover{
+        border-color: @primary-color;
+        color: @primary-color;
+    }
+}

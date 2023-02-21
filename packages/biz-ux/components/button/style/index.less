@@ -1,0 +1,84 @@
+@import '../../style/themes/default';
+@import '../../style/mixins/index';
+@import './mixin.less';
+
+
+// // 默认按钮样式
+.biz-button{
+    margin-right: 10px;
+    padding: 0 16px;
+    font-weight: @btn-font-weight;
+    white-space: nowrap;
+    text-align: center;
+    border: 1px solid ;
+    cursor: pointer;
+    .biz-button-class(@btn-default-color,@btn-default-bg,@btn-default-border);
+    &:hover{
+        .biz-button-class(@btn-default-hover-color,@btn-default-hover-bg,@btn-default-hover-border);
+    }
+    &:active{           
+        .biz-button-class(@btn-default-hover-color, @btn-default-active-bg,@btn-default-active-border);
+    }
+
+    .biz-button-size(@btn-height-base,0 16px,@font-size-base,@btn-border-radius-base);
+    &.small{
+        .biz-button-size(@btn-height-sm,@btn-padding-sm, @font-size-sm,@btn-border-radius-sm )
+    }
+    &.large{
+        .biz-button-size(@btn-height-lg,@btn-padding-lg, @font-size-lg,@btn-border-radius-base )
+    }
+
+    &_primary{
+        .biz-button-class(@btn-primary-color,@btn-primary-bg,@btn-primary-bg);
+        &:hover{
+            .biz-button-class(@btn-primary-hover-color,@btn-primary-hover-bg,@btn-primary-hover-bg);
+        }
+        &:active{           
+            .biz-button-class(@btn-primary-hover-color, @btn-primary-active-bg,@btn-primary-active-bg);
+        }
+    }
+
+    &_minor{
+        .biz-button-class(@btn-default-color,@btn-default-bg,@btn-default-border);
+        &:hover{
+            .biz-button-class(@btn-default-hover-color,@btn-default-hover-bg,@btn-default-hover-border);
+        }
+        &:active{           
+            .biz-button-class(@btn-default-hover-color, @btn-default-active-bg,@btn-default-active-border);
+        }
+    }
+
+    &_danger{
+        .biz-button-class(@btn-danger-color,@btn-danger-bg,@btn-danger-border);
+        &:hover{
+            .biz-button-class(@btn-danger-hover-color,@btn-danger-hover-bg,@btn-danger-hover-border);
+        }
+    }
+
+    &_disable{
+        .biz-button-class(@btn-disable-color,@btn-disable-bg,@btn-disable-border);
+        &:hover{
+            cursor: not-allowed;
+            .biz-button-class(@btn-disable-color,@btn-disable-bg,@btn-disable-border);
+        }
+    }
+}
+
+// 禁用样式
+// .biz-button[disabled]{
+//     cursor: not-allowed;
+//     color: rgba(0,0,0,.25);
+//     background-color: #f5f5f5;
+//     border-color: #d9d9d9;
+//     text-shadow: none;
+//     box-shadow: none;
+// }
+
+// 处理默认样式
+button{
+    -webkit-appearance: button;
+    outline: 0;
+    border-radius: 2px;
+    line-height: inherit;
+    padding: 0;
+}

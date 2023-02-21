@@ -1,0 +1,108 @@
+
+@import '../../style/themes/default.less';
+@import '../../icon/style/index.less';
+@import '../../spin/style/index.less';
+@import '../../_common/msg/style/index.less';
+
+.biz-notification{
+   position: fixed;
+   z-index: @zindex-message;        
+    .biz-msg{
+        &_item{
+            padding: 14px;
+            margin: 10px;
+            width: 290px;
+            height: 140px;
+            background: #F5F7F7;
+            border: 1px solid #E2E2E2;
+            box-shadow: 0 4px 14px 0 rgba(184,184,184,0.37);
+            border-radius: 5px;
+        }
+        &_item{
+            position: relative;
+            // display: block;
+            // text-align: center;
+        }
+        &_close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        &_arrow{
+            position: absolute;
+            display: none;
+            height: 12px;
+            width: 12px;
+            border: 1px solid #E2E2E2;
+            border-left: 0;
+            border-bottom: 0;         
+            background: #F5F7F7;
+        }
+        &_item:last-child{
+            .biz-msg_arrow{
+                display: block;
+            }
+        }
+
+        &_item-icon{
+            float: left;
+            width: 32px;
+            i.bizicon{
+                display: inline-block;
+                vertical-align: top;
+                margin: 0 3px;     
+                font-size: 32px;       
+            }
+        }
+        &_item-message{
+            font-size: 14px;
+            color: #333333;
+            font-weight: bold;
+        }
+        &_item-body{
+            overflow: hidden;
+            padding:5px 12px;
+        }
+        &_content{
+            font-size: 12px;
+            color: #686C6C;
+            letter-spacing: 0;
+        }
+    }
+    &.topLeft{
+        .biz-msg_arrow{
+            left: -7px;
+            top: 20px;
+            transform: rotate(-135deg);
+        }
+    }
+    &.topRight{
+        .biz-msg_arrow{
+            right: -7px;
+            top: 20px;
+            transform: rotate(45deg);
+        }
+    }
+    &.bottomLeft{
+        .biz-msg_arrow{
+            left: -7px;
+            bottom: 20px;
+            transform: rotate(-135deg);
+        }
+    }
+    &.bottomRight{
+        .biz-msg_arrow{
+            right: -7px;
+            bottom: 20px;
+            transform: rotate(45deg);
+        }
+    }
+    &.hide-arrow{
+        .biz-msg_arrow{
+            display: none !important;
+        }
+    }
+
+}

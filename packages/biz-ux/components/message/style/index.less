@@ -1,0 +1,80 @@
+@import '../../style/themes/default.less';
+@import '../../icon/style/index.less';
+@import '../../spin/style/index.less';
+@import '../../_common/msg/style/index.less';
+
+// @alert-success-border-color: ~`colorPalette('@{success-color}', 3) `;
+// @alert-success-bg-color: ~`colorPalette('@{success-color}', 1) `;
+// @alert-success-icon-color: @success-color;
+// @alert-info-border-color: ~`colorPalette('@{info-color}', 3) `;
+// @alert-info-bg-color: ~`colorPalette('@{info-color}', 1) `;
+// @alert-info-icon-color: @info-color;
+// @alert-warning-border-color: ~`colorPalette('@{warning-color}', 3) `;
+// @alert-warning-bg-color: ~`colorPalette('@{warning-color}', 1) `;
+// @alert-warning-icon-color: @warning-color;
+// @alert-error-border-color: ~`colorPalette('@{error-color}', 3) `;
+// @alert-error-bg-color: ~`colorPalette('@{error-color}', 1) `;
+// @alert-error-icon-color: @error-color;
+
+.biz-message{
+    position: fixed;
+    top: 0;
+    z-index: @zindex-message;        
+    width: 100%;
+    pointer-events: none;
+    .biz-msg{
+        &_item{
+            display: block;
+            text-align: center;
+        }
+        &_item-icon{
+            display: inline-block;
+            vertical-align: middle;
+            height: 22px;
+            margin-right: 3px;
+        }
+        &_item-message{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;      
+            line-height: 22px;
+            height: 22px;
+        }
+        &_item-body{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &_arrow,
+        &_close{
+            display: none;
+        }
+        &_content{
+            display: inline-block;
+            margin: 5px;
+            padding: @message-notice-content-padding;
+            height: 42px;
+            background: #fff;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            pointer-events: all;
+            i.bizicon{
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 3px;     
+                font-size: 14px;       
+            }
+            >span{
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 14px;      
+            }
+        }
+        &_content.loading{
+            padding: 0 16px 0 5px;
+            .biz-spin{
+                display: inline-block;
+            }
+        }
+    }
+}

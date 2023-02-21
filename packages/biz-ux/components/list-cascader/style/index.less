@@ -1,0 +1,29 @@
+@import '../../list/style/index.less';
+@import '../../icon/style/index.less';
+
+.biz-list-cascader{
+    font-size: 0;
+    &_item-warper{
+        display: inline-block;
+        max-height: 200px;        
+        overflow: auto;
+        font-size: 12px;
+        vertical-align: top;
+        i.bizicon-arrow-solid-right{
+            color: #ccc;
+        }
+    }
+    .biz-list_item{
+        position: relative;
+        padding-right: 16px;
+    }
+    .bizicon-arrow-solid-right{
+        position: absolute;
+        top:50%;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        margin-top: -8px;
+        line-height: 16px;
+    }
+}
