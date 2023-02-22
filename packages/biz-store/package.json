@@ -2,7 +2,7 @@
   "name": "biz-store",
   "version": "1.0.3",
   "description": "> Simplify the use of Redux ",
-  "author": "lihongyin <lihongyin@58.com>",
+  "author": "lihongyin",
   "homepage": "",
   "license": "ISC",
   "main": "lib/index.js",
