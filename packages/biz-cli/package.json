@@ -2,7 +2,7 @@
   "name": "biz-cli",
   "version": "0.1.47",
   "description": "通用脚命令行工具",
-  "author": "lihongyin <lihongyin@58.com>",
+  "author": "lihongyin",
   "homepage": "",
   "license": "ISC",
   "main": "lib/biz-cli.js",
@@ -18,8 +18,7 @@
     "lib"
   ],
   "repository": {
-    "type": "git",
-    "url": "http://igit.58corp.com/chinahr-fe/biz-cli.git"
+    "type": "git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",

@@ -28,7 +28,7 @@ module.exports = {
     assetsDir: 'static',
     ribbon: {
         // Link to open on the ribbon click (required)
-        url: 'http://igit.58corp.com/hrg-fe/chinahr-fe/biz-ux.git',
+        url: '',
         // Text to show on the ribbon (optional)
         text: 'Fork me on igit'
     },

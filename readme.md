@@ -2,9 +2,9 @@
 
 biz-arch 解决方案，包括 BizUX组件库、Redux 简化框架、API 开发简化框架、Cli等。
 
-- [BizUX 组件库](http://biz-ui.58corp.com/)
-- [Redux 简化框架](http://biz-ui.58corp.com/#/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0?id=section-reudx-%E5%BC%80%E5%8F%91%E7%AE%80%E5%8C%96%E5%AE%9E%E8%B7%B5)
-- [API 开发简化](http://biz-ui.58corp.com/#/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0?id=section-%E6%9E%81%E7%AE%80%E7%9A%84-form-%E8%A1%A8%E5%8D%95%E6%96%B9%E6%A1%88)
+- [BizUX 组件库]
+- [Redux 简化框架]
+- [API 开发简化]
 
 ## 启动
 

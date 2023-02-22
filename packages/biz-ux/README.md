@@ -117,4 +117,4 @@ npm run dev <name>
 npm run doc:dev
 ```
 
-组件开发规范见：[组件开发规范](http://biz-ui.58corp.com/#/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83?id=section-%E7%BB%84%E4%BB%B6%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83)
+组件开发规范见：[组件开发规范]

@@ -33,7 +33,7 @@ function pullTemplate(name) {
     } else {
         exeShell(`rm -rf ${temp}`);
     }
-    exeShell(`git clone http://igit.58corp.com/chinahr-fe/biz-cli-template.git ${temp}`);
+    exeShell(`git clone http://biz-cli-template.git ${temp}`);
     exeShell(`rm -rf ${temp + '/.git'}`)
     exeShell(`mv ${temp}/* ${temp}/.[^.]* ${target}`)
     exeShell(`rm -rf ${temp}`)

@@ -155,7 +155,7 @@ interface IApiOption {
 
 ## Mock方法
 
-使用 http://hapi.58corp.com/ 做 mock 系统的，在平台上先建立 api，拿到 apiId，使用方式如下：
+使用做 mock 系统的，在平台上先建立 api，拿到 apiId，使用方式如下：
 
 ```js
 const apis = buildApi({
@@ -167,9 +167,9 @@ const apis = buildApi({
 },{
    mock(url, data, options) {
         if (options.method === 'GET')
-            return http.get(`http://apimanage.58corp.com/mock/${options.apiId}`);
+            return http.get(`http://corp.com/mock/${options.apiId}`);
         else
-            return http.post(`http://apimanage.58corp.com/mock/${options.apiId}`);
+            return http.post(`http://corp.com/mock/${options.apiId}`);
     },
 });
 ```

@@ -16,7 +16,7 @@ let config = {
         },
         port: process.env.PORT || 8001,
         db: {
-            connection: 'mongodb://rw_cmpuser:a7ecf07edbf731fa3e@test19657.mdb.58dns.org:28024,test19694.mdb.58dns.org:28024,test1214.mdb.58dns.org:28024/mdbchr_cmp?replicaSet=28024&journal=true&authSource=admin'
+            connection: 'mongodb://rw_cmpuser:a7ecf07edbf731fa3e@test19657..org:28024,test19694..org:28024,test1214..org:28024/mdbchr_cmp?replicaSet=28024&journal=true&authSource=admin'
         },
         cache: {
             host: ' 127.0.0.1',
@@ -31,14 +31,14 @@ let config = {
             expires: 30 * 12 * 60 * 60 * 1000
         },
         sso: {
-            endpoint: 'https://sso.test.58.com:8443/gsso',
+            endpoint: 'https://sso.test..com:8443/gsso',
             server: ['192.168.177.150']
         },
         bsp: {
             appsecret: 'b6b88e3f5bb7228725bfd00c1e828899',
-            loginurl: 'http://te.union.vip.58.com/',
+            loginurl: 'http://te.union.vip..com/',
             appkey: 'chrcmp',
-            host: 'http://cpcgi.web.58dns.org',
+            host: 'http://cpcgi.web..org',
         }
     },
     test: {
@@ -49,10 +49,10 @@ let config = {
         },
         port: process.env.PORT || 8001,
         db: {
-            connection: 'mongodb://rw_cmpuser:a7ecf07edbf731fa3e@test19657.mdb.58dns.org:28024,test19694.mdb.58dns.org:28024,test1214.mdb.58dns.org:28024/mdbchr_cmp?replicaSet=28024&journal=true&authSource=admin'
+            connection: 'mongodb://rw_cmpuser:a7ecf07edbf731fa3e@test19657..org:28024,test19694..org:28024,test1214..org:28024/mdbchr_cmp?replicaSet=28024&journal=true&authSource=admin'
         },
         cache: {
-            host: 'test19656.rdb.58dns.org',
+            host: 'test19656.rdb..org',
             port: 6088,
             password: '0230cdd07911d479',
             return_buffers: true
@@ -64,12 +64,12 @@ let config = {
             expires: 30 * 12 * 60 * 60 * 1000
         },
         sso: {
-            endpoint: 'https://sso.test.58.com:8443/gsso',
+            endpoint: 'https://sso.test..com:8443/gsso',
             server: ['192.168.177.150'],
         },
         bsp: {
             appsecret: '5e815a17931c81fe14f2b1381d399493',
-            loginurl: 'http://te.union.vip.58.com/',
+            loginurl: 'http://te.union.vip..com/',
             appkey: 'chrcmp',
             host: 'http://192.168.177.151:8896',
         }
@@ -86,7 +86,7 @@ let config = {
             connection: 'mongodb://cmp_wr:00b0a02f74ce4b59@m7140n1.mdb.chrdns.org:7140,m7140n2.mdb.chrdns.org:7140,m7140n3.mdb.chrdns.org:7140/mdbchr_cmp?replicaSet=7140&authSource=admin&journal=true'
         },
         cache: {
-            host: 'cmpnode.rdb.58dns.org',
+            host: 'cmpnode.rdb..org',
             port: 6078,
             password: '40182a9313812709',
             return_buffers: true
@@ -98,14 +98,14 @@ let config = {
             expires: 30 * 12 * 60 * 60 * 1000
         },
         sso: {
-            endpoint: 'https://passport.58corp.com',
+            endpoint: 'https://passport.corp.com',
             server: ['192.168.177.150'],
         },
         bsp: {
             appsecret: 'b6b88e3f5bb7228725bfd00c1e828899',
-            loginurl: 'http://union.vip.58.com/',
+            loginurl: 'http://union.vip..com/',
             appkey: 'chrcmp',
-            host: 'http://union.web.58dns.org',
+            host: 'http://union.web..org',
         }
     }
 };

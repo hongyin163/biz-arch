@@ -1,12 +1,10 @@
 ## 组件仓库
 
-http://igit.58corp.com/chinahr-fe/biz-arch.git
 
 组件库在 `packages/biz-ux` 目录下
 
 `biz-ux` 库本身有自己的git仓库：
 
-http://igit.58corp.com/hrg-fe/chinahr-fe/biz-ux.git
 
 在 `biz-arch` 项目下，开发测试，通过 `git subtree` 命令，将代码同步到 `biz-ux` 仓库。
 
@@ -152,7 +150,7 @@ npm run doc:dev
 ## 文档发布
 * 在 `biz-arch` 下执行 `npm run pull:biz-ux`,同步代码，然后执行 `npm run push:biz-ux`,推送代码到 `biz-ux` 库
 * 登录 `arthurci` 系统
-* 进入构建页面：http://arthurci.58corp.com/node-build?id=381&branch=master
+* 进入构建页面：http://corp.com/node-build?id=381&branch=master
 * 启动构建
 * 构建完成后，点击右侧`送测`
 * 进入`集群管理`，点击 `chr_node_bizui`

@@ -17,8 +17,7 @@
     "es"
   ],
   "repository": {
-    "type": "git",
-    "url": "http://igit.58corp.com/chinahr-fe/biz-store.git"
+    "type": "git"
   },
   "scripts": {
     "dev": "tsc --outDir ./es --module es2015 --watch",
